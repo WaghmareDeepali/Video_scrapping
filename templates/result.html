@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Videos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Videos</h1>
+    <table>
+        <tr>
+            <th>Video URL</th>
+            <th>Thumbnails</th>
+            <th>Titles</th>
+            <th>Views</th>
+            <th>Upload Time</th>
+        </tr>
+        {% for video in reviews %}
+        <tr>
+            <td><a href="{{ video[0] }}">{{ video[0] }}</a></td>
+            <td><img src="{{ video[1] }}" alt="Thumbnail"></td>
+            <td>{{ video[2] }}</td>
+            <td>{{ video[3] }}</td>
+            <td>{{ video[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
